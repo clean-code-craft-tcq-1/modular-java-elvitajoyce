@@ -4,9 +4,6 @@ public class ColorPair {
 	private MajorColor majorColor;
 	private MinorColor minorColor;
 
-	final static String MajorColorNames[] = { "White", "Red", "Black", "Yellow", "Violet" };
-	final static String MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
-
 	public ColorPair(MajorColor major, MinorColor minor) {
 		majorColor = major;
 		minorColor = minor;
@@ -21,9 +18,11 @@ public class ColorPair {
 	}
 
 	String ToString() {
-		String colorPairStr = MajorColorNames[majorColor.getIndex()];
+		String colorPairStr = ColorCodeConstants.majorColorNames[majorColor.getIndex()];
 		colorPairStr += " ";
-		colorPairStr += MinorColorNames[minorColor.getIndex()];
+		colorPairStr += ColorCodeConstants.minorColorNames[minorColor.getIndex()];
 		return colorPairStr;
 	}
+	
+	
 }
